@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FINN v2.5 — QR Code Publik (Tanpa Login Akun)</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background: #F4F7FB;
+      color: #0F172A;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .header {
+      text-align: center;
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+    .badge {
+      display: inline-block;
+      background: #EFF6FF;
+      color: #2563EB;
+      border: 1px solid #BFDBFE;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    p.subtitle {
+      font-size: 15px;
+      color: #64748B;
+      line-height: 22px;
+    }
+    .cards-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: center;
+      max-width: 960px;
+      width: 100%;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 24px;
+      padding: 28px;
+      width: 440px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    }
+    .card-tag {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 12px;
+    }
+    .tag-apk {
+      background: #EFF6FF;
+      color: #2563EB;
+    }
+    .tag-expogo {
+      background: #ECFEFF;
+      color: #0891B2;
+    }
+    .card h2 {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 13px;
+      color: #64748B;
+      line-height: 19px;
+      margin-bottom: 20px;
+    }
+    .qr-box {
+      background: #FFFFFF;
+      border: 2px solid #E2E8F0;
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 18px;
+    }
+    .qr-box img {
+      width: 220px;
+      height: 220px;
+      display: block;
+    }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      padding: 13px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      background: #2563EB;
+      color: #FFFFFF;
+    }
+    .btn-cyan {
+      background: #06B6D4;
+      color: #FFFFFF;
+    }
+    .url-box {
+      width: 100%;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 11px;
+      color: #475569;
+      word-break: break-all;
+      text-align: left;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="badge">100% PUBLIK • TANPA LOGIN AKUN EXPO</div>
+    <h1>FINN v2.5 — Pusat Unduhan &amp; QR Code Publik</h1>
+    <p class="subtitle">
+      Kedua QR Code di bawah ini menggunakan tautan publik langsung (Direct Artifact &amp; Direct Deep Link),
+      sehingga dapat dipindai oleh HP siapa saja (dosen, penguji, atau teman) tanpa perlu login akun Expo.
+    </p>
+  </div>
+
+  <div class="cards-grid">
+    <!-- CARD 1: DIRECT ANDROID APK -->
+    <div class="card">
+      <div class="card-tag tag-apk">Khusus HP Android (Aplikasi Mandiri)</div>
+      <h2>1. Download Langsung File .APK</h2>
+      <p>
+        Scan dengan <strong>Kamera HP / Google Lens / Chrome</strong> (JANGAN di-scan dari dalam aplikasi Expo Go). File <strong>Finn.apk</strong> akan langsung terunduh.
+      </p>
+      <div class="qr-box">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https%3A%2F%2Fexpo.dev%2Fartifacts%2Feas%2FZpRA__GQrEzHY_wH9xMw7ESYYZxS4p0-RxhXnfElLOo.apk"
+          alt="QR Code Download APK Finn"
+        />
+      </div>
+      <a
+        class="btn btn-primary"
+        href="https://expo.dev/artifacts/eas/ZpRA__GQrEzHY_wH9xMw7ESYYZxS4p0-RxhXnfElLOo.apk"
+        target="_blank"
+      >
+        ⬇ Unduh Finn.apk Langsung
+      </a>
+      <div class="url-box">
+        https://expo.dev/artifacts/eas/ZpRA__GQrEzHY_wH9xMw7ESYYZxS4p0-RxhXnfElLOo.apk
+      </div>
+    </div>
+
+    <!-- CARD 2: DIRECT EXPO GO (IPHONE & ANDROID) -->
+    <div class="card">
+      <div class="card-tag tag-expogo">Untuk iPhone (iOS) &amp; Android via Expo Go</div>
+      <h2>2. Buka Langsung di Expo Go</h2>
+      <p>
+        Scan menggunakan <strong>Kamera iPhone</strong> atau menu <strong>Scan QR Code di dalam aplikasi Expo Go</strong>. Tidak memerlukan login akun.
+      </p>
+      <div class="qr-box">
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=exp%3A%2F%2Fu.expo.dev%2F119106fd-6845-4ada-a388-4f0f392e571a%3Fchannel-name%3Dpreview%26runtime-version%3Dexposdk%253A58.0.0"
+          alt="QR Code Direct Expo Go"
+        />
+      </div>
+      <a
+        class="btn btn-cyan"
+        href="exp://u.expo.dev/119106fd-6845-4ada-a388-4f0f392e571a?channel-name=preview&runtime-version=exposdk%3A58.0.0"
+      >
+        🚀 Buka di Aplikasi Expo Go
+      </a>
+      <div class="url-box">
+        exp://u.expo.dev/119106fd-6845-4ada-a388-4f0f392e571a?channel-name=preview&amp;runtime-version=exposdk%3A58.0.0
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
