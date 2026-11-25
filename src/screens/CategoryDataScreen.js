@@ -9,6 +9,7 @@
 import React, { useCallback, useRef, useState } from 'react';
 import {
   ActivityIndicator,
+  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -35,6 +36,8 @@ import {
 } from '../constants/theme.js';
 import { useFinn } from '../context/FinnContext.js';
 import { getExportCsvFileName } from '../utils/csvUtils.js';
+
+const APP_BRAND_ICON = require('../../assets/icon.png');
 
 export default function CategoryDataScreen({ navigation }) {
   const {
@@ -177,7 +180,11 @@ export default function CategoryDataScreen({ navigation }) {
         <View style={styles.topHeaderRow}>
           <View style={styles.headerTitleGroup}>
             <View style={styles.headerIconCircle}>
-              <Ionicons name="grid-outline" size={20} color={COLORS.ink} />
+              <Image
+                source={APP_BRAND_ICON}
+                style={styles.headerBrandImage}
+                resizeMode="cover"
+              />
             </View>
             <View style={styles.titleCol}>
               <Text style={styles.screenTitle}>Kategori &amp; data</Text>
@@ -459,13 +466,20 @@ const styles = StyleSheet.create({
     marginRight: SPACING.sm,
   },
   headerIconCircle: {
-    width: 44,
-    height: 44,
+    width: 42,
+    height: 42,
     borderRadius: RADIUS.full,
-    backgroundColor: COLORS.surface,
+    backgroundColor: '#F5F6F0',
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
     ...SHADOWS.card,
+  },
+  headerBrandImage: {
+    width: '100%',
+    height: '100%',
   },
   titleCol: {
     flex: 1,

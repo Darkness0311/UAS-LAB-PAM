@@ -9,6 +9,7 @@
 
 import React from 'react';
 import {
+  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -34,6 +35,8 @@ import {
 } from '../constants/theme.js';
 import { useFinn } from '../context/FinnContext.js';
 import { formatCompactIDR } from '../utils/amountUtils.js';
+
+const APP_BRAND_ICON = require('../../assets/icon.png');
 
 export default function AnalyticsScreen() {
   const {
@@ -75,7 +78,11 @@ export default function AnalyticsScreen() {
         <View style={styles.topHeaderRow}>
           <View style={styles.headerTitleGroup}>
             <View style={styles.headerIconCircle}>
-              <Ionicons name="pie-chart-outline" size={20} color={COLORS.ink} />
+              <Image
+                source={APP_BRAND_ICON}
+                style={styles.headerBrandImage}
+                resizeMode="cover"
+              />
             </View>
             <View>
               <Text style={styles.screenTitle}>Analisis</Text>
@@ -257,13 +264,20 @@ const styles = StyleSheet.create({
     marginRight: SPACING.sm,
   },
   headerIconCircle: {
-    width: 44,
-    height: 44,
+    width: 42,
+    height: 42,
     borderRadius: RADIUS.full,
-    backgroundColor: COLORS.surface,
+    backgroundColor: '#F5F6F0',
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
     ...SHADOWS.card,
+  },
+  headerBrandImage: {
+    width: '100%',
+    height: '100%',
   },
   screenTitle: {
     fontSize: 22,

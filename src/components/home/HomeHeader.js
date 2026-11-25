@@ -294,10 +294,10 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   brandAvatarCircle: {
-    width: 40,
-    height: 40,
+    width: 42,
+    height: 42,
     borderRadius: RADIUS.full,
-    backgroundColor: COLORS.surface,
+    backgroundColor: '#F5F6F0',
     overflow: 'hidden',
     borderWidth: 1,
     borderColor: COLORS.border,

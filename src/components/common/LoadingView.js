@@ -1,24 +1,35 @@
 /**
  * FINN v2.5 — Full-Screen Loading View
- * Visual Redesign: Light-Mode Fintech Flat Card (#EEECE6 canvas, #FFFFFF rounded-[32px]).
+ * Visual Redesign: Light-Mode Fintech Flat Card dengan logo Finn baru (#EEECE6 canvas, #FFFFFF rounded-[32px]).
  * Tetap menampilkan spinner layar penuh tanpa angka Rp0 sesaat.
  */
 
 import React from 'react';
-import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, Image, StyleSheet, Text, View } from 'react-native';
 import { COLORS, RADIUS, SHADOWS, SPACING } from '../../constants/theme.js';
+
+const APP_BRAND_ICON = require('../../../assets/icon.png');
 
 export default function LoadingView() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
-        <View style={styles.spinnerCircle}>
-          <ActivityIndicator size="large" color={COLORS.ink} />
+        <View style={styles.logoCircle}>
+          <Image
+            source={APP_BRAND_ICON}
+            style={styles.logoImage}
+            resizeMode="cover"
+          />
         </View>
         <Text style={styles.title}>Memuat data Finn</Text>
         <Text style={styles.subtitle}>
           Menyiapkan catatan pengeluaran lokal Anda
         </Text>
+        <ActivityIndicator
+          size="small"
+          color={COLORS.ink}
+          style={styles.spinner}
+        />
       </View>
     </View>
   );
@@ -43,13 +54,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: SPACING.xl,
     ...SHADOWS.card,
   },
-  spinnerCircle: {
-    width: 68,
-    height: 68,
+  logoCircle: {
+    width: 76,
+    height: 76,
     borderRadius: RADIUS.full,
-    backgroundColor: COLORS.lime,
+    backgroundColor: '#F5F6F0',
+    borderWidth: 1,
+    borderColor: COLORS.border,
+    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logoImage: {
+    width: '100%',
+    height: '100%',
   },
   title: {
     marginTop: SPACING.lg,
@@ -64,5 +82,8 @@ const styles = StyleSheet.create({
     color: COLORS.textSecondary,
     textAlign: 'center',
     lineHeight: 19,
+  },
+  spinner: {
+    marginTop: SPACING.lg,
   },
 });

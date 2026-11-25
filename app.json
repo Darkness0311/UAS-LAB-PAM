@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.tanriindra.finn"
@@ -13,7 +13,7 @@
     "android": {
       "package": "com.tanriindra.finn",
       "adaptiveIcon": {
-        "backgroundColor": "#130A25",
+        "backgroundColor": "#F5F6F0",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
